@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puesto choto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .margin {
+            margin-top: 5%;
+        }
+
+        .materialboxed {
+            border-radius: 100%;
+        }
+        .boton{
+            border-radius: 2em;
+        }
+
+        .sub-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2em;
+            padding: 2em !important;
+        }
+
+        .panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2em;
+
+        }
+
+        .box {
+            margin: 2em;
+            padding: 3em;
+            border-radius: 2em;
+
+        }
+
+        .resumen {
+            border-radius: 2em;
+        }
+
+        .modal {
+            max-height: max-content !important;
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-sesion" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="./buscar_empleo.html">Buscar Empleo</a></li>
+                    <li><a href="./perfil_empleado.html">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="resumen" class="container margin row">
+        <div class="col s3 panel">
+            <div id="empresa" class="sub-panel orange lighten-3">
+                <img id="empresa-img" class=" materialboxed" width="200" alt="imagen de gato culon">
+                <a class="center" id="empresa-redirect" ><h5 ><b id="empresa-titulo"></b></h5></a>
+                <h5 id="empresa-rubro" class="center"></h5>
+            </div>
+            <a href="#" id="postular" class="boton teal lighten-2 margin btn"><b>Postularme!</b></a>
+        </div>
+        <div class="left col s8 offset-s1 resumen orange lighten-3">
+            <div id="box-importante" class="box orange accent-2">
+                <h5 class="center"><b id="puesto-titulo"></b></h5>
+                <span id="puesto-descripcion" ></span>
+                <span class="right"> Full-Time</span>
+            </div>
+            <div id="box__descripcion" class="box orange accent-2">
+                <h5 class="center"><b>Descripcion</b></h5>
+                <span id="descripcion"></span>
+            </div>
+            <div class="box orange accent-2">
+                <h5 class="center"><b>Requisitos</b></h5>
+                <span id="requisitos"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/ver_vacante.js"></script>
+    <script>
+        M.AutoInit();/*
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems, open());
+            });*/
+    </script>
+</body>
+
+</html>

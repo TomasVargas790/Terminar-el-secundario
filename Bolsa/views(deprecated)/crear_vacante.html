@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/crear_vacante.css">
+    <title>Crear Vacante</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <nav class="nav">
+                <ul id = "nav_ul" class="nav__ul">
+                    <li class="nav__li"><a href="../index.html" class="nav__a">Index</a></li>
+                    <li class="nav__li"><a href="#" class="nav__logo">LABURO</a></li>
+                    <li class="nav__li nav__li--right"><a id ="cerrar-sesion" class="nav__a"></a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <div class="container">
+            <div class="outer">
+                <form id="vacante" action="">
+
+                    <h3 class="inner__h3">Crear Vacante</h3>
+                    <div class="inner">
+                        <input class="inner__input" name="titulo" id="titulo" placeholder="Cargo" type="text">
+                        <input class="inner__input" step="1000" name="salario" id="salario" placeholder="Salario"
+                            type="number">
+                        <input class="inner__input" name="cantidad" id="cantidad" placeholder="Cantidad" type="number">
+                        <input class="inner__input" name="ubicacion" id="ubicacion" placeholder="Ubicacion" type="text">
+                        <textarea placeholder="Descripcion" class="inner__input" name="Descripcion" id="descripcion"
+                            cols="25" rows="10"></textarea>
+                        <textarea class="inner__input" name="requisitos" id="requisitos" placeholder="Requisitos"
+                            cols="25" rows="10"></textarea>
+                        <button class="inner__input inner__input--boton" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../js/crear_vacante.js"></script>
+</body>
+
+</html>

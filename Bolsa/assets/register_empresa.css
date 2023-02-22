@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'Ubuntu', sans-serif;
+}
+.container{    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background:url(../assets/register_empresa.jpg);
+    background-position: center;
+}
+.box{
+    width: 35%;
+    height: 100%;
+    background-color: #e9777762;
+}
+.box1{
+    width: 30%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.inner {
+    padding: 2em;
+    color: #000000;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+form{
+    width: 100%;
+    height: 100%;
+}
+.inner__input{
+    border:none;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #dac9c9c7;
+    width: 45%;
+    border-radius: 2em;
+}
+
+.inner__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.inner__input--select{
+    width:50%
+} 
+
+.inner__a {
+    text-decoration: none;
+    text-align: end;
+    margin-bottom: 1em;
+}
+
+.inner__input--button{
+    cursor: pointer;
+    background-color: #ce8989;
+}
+.inner__input--button:hover{
+    background-color: #ce6d6d;
+}
+.inner__input--select{
+    width:50%
+} 

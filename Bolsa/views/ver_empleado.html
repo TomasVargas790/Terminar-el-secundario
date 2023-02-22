@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+
+        .collapsible-header{
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        p {
+            box-sizing: content-box !important;
+            line-break:anywhere
+        }
+        .margin {
+            margin-top: 5%;
+        }
+
+        .materialboxed {
+            border-radius: 100%;
+        }
+
+        .panel {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2em;
+            padding: 2em !important;
+        }
+
+        .box {
+            margin: 2em;
+            padding: 3em;
+            border-radius: 2em;
+
+        }
+
+        .resumen {
+            border-radius: 2em;
+        }
+
+        .modal {
+            max-height: max-content !important;
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class=" container nav-wrapper">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-session" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a id="buscar-algo" href="./buscar_empleado.html"></a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#resumen">Resumen</a></li>
+                    <li class="tab"><a href="#estudiosTab">Estudios</a></li>
+                    <li class="tab"><a href="#experienciaTab">Experiencia</a></li>
+                    <li class="tab"><a href="#idiomaTab">Idiomas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="resumen" class="container margin row">
+        <div id="panel" class=" col s3 panel orange lighten-3">
+            <img id="img" src="" class=" materialboxed" width="200" alt="imagen de gato culon">
+            <h5 class="center">
+                <b id="h5panel"></b>
+            </h5>
+            <h5 id="subh5panel" class="center"></h5>
+        </div>
+        <div class="left col s7 offset-s2 resumen orange lighten-3">
+            <h4 class="center">Estudios</h4>
+            <div id="box__estudios" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-estudios"></b></h5>
+            </div>
+            <h4 class="center">Experiencia</h4>
+            <div id="box__experiencia" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-experiencia"></b></h5>
+            </div>
+            <h4 class="center">Idioma</h4>
+            <div id="box__idioma" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-idioma"></b></h5>
+            </div>
+        </div>
+    </div>
+
+    <div id="estudiosTab" class="container margin">
+        <h5><b>Mis Estudios</b></h5>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulEstudioTab" class="collapsible">
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="experienciaTab" class="container margin">
+        <h5><b>Mis Experiencias</b></h5>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulExperienciaTab" class="collapsible">
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="idiomaTab" class="container margin">
+        <h5><b>Mis Idiomas</b></h5>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulIdiomaTab" class="collapsible">
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/ver_empleado.js"> </script>
+
+    <script>
+        M.AutoInit();/*
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems, open());
+            });*/
+    </script>
+</body>
+
+</html>

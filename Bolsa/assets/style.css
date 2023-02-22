@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul,
+li,
+a,
+h1 {
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+    padding: 0;    
+    text-decoration: none;
+    list-style: none;    
+}
+
+nav{
+    width: 100%;
+}
+
+.index {
+    
+    z-index: 1;
+    background-color: #FF9F9F;
+    height: 100vh;
+    width: 100vw;
+}
+
+.index_container {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/student-849825.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+    font-family: 'Exo', sans-serif;    
+    opacity: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_container h1{
+    
+    font-size: 8em;
+    color: black
+}
+header{    
+    background-color: #FF9F9F;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+}
+header nav ul li{
+    margin-inline: 1em;
+    font-size: 2em;
+}
+
+.empleado {
+    background: linear-gradient(181deg, #cea3e7 48%, #a05cdf 100%);
+    font-family: 'Exo', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.empleado__panel {
+    margin-top: 7em;
+    width: 15em;
+    height: 30em;
+    background-color: #f3f2ccc4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #7165f7c4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.empleado__panel img {
+    margin-top: 2em;
+    width: 13em;
+    height: 13em;
+    border-radius: 100%;
+}
+
+.empleado__box {
+
+    margin-top: 5em;
+}
+
+.empleado__box__estudios {
+    margin-top: 1em;
+    width: 40em;
+    height: 15em;
+    background-color: #f3f2ccc4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #7165f7c4;
+}
+
+.empleado__box__experiencia {
+    margin-top: 2em;
+    width: 40em;
+    height: 15em;
+    background-color: #f3f2ccc4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #7165f7c4;
+}
+
+.empleado__box__pasantias {
+    margin-top: 2em;
+    width: 40em;
+    height: 15em;
+    background-color: #f3f2ccc4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #7165f7c4;
+}
+
+.empleador {
+    background: linear-gradient(181deg, #f3d697 48%, #f1bd4d 100%);
+    font-family: 'Exo', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.empleador__panel {
+    margin-top: 7em;
+    width: 15em;
+    height: 30em;
+    background-color: #dedde9c4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px rgb(163 134 71);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.empleador__panel img {
+    margin-top: 2em;
+    width: 13em;
+    height: 13em;
+    border-radius: 100%;
+}
+
+.empleador__box {
+    margin-top: 5em;
+}
+
+.empleador__box__estudios {
+    margin-top: 1em;
+    width: 40em;
+    height: 15em;
+    background-color: #dedde9c4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px rgb(163 134 71);
+
+}
+
+.empleador__box__experiencia {
+    margin-top: 2em;
+    width: 40em;
+    height: 15em;
+    background-color: #dedde9c4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px rgb(163 134 71);
+}
+
+.empleador__box__pasantias {
+    margin-top: 2em;
+    width: 40em;
+    height: 15em;
+    background-color: #dedde9c4;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px rgb(163 134 71);
+}

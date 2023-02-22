@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <style>
+        #box__empresa {
+            overflow: hidden scroll;
+        }
+
+        .margin {
+            margin-top: 5%;
+        }
+
+        .materialboxed {
+            border-radius: 100%;
+        }
+
+        .panel {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2em;
+            padding: 2em !important;
+        }
+
+        .box {
+            margin: 2em;
+            padding: 3em;
+            border-radius: 2em;
+
+        }
+
+        .resumen {
+            border-radius: 2em;
+        }
+
+        .modal {
+            max-height: max-content !important;
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class=" container nav-wrapper">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-session" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="./buscar_empleado.html">Buscar Empleado</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#resumen">Resumen</a></li>
+                    <li class="tab"><a href="#vacanteTab">Vacantes</a></li>
+                    <li class="tab"><a href="#pasantiasTab">Pasantias</a></li>
+                    <li class="tab"><a href="#postuladosTab">Postulaciones</a></li>
+                    <li class="tab"><a href="#settingsTab">Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="resumen" class="container margin row">
+        <div id="panel" class=" col s3 panel orange lighten-3">
+            <img id="img" src="" class=" materialboxed" width="200" alt="imagen de gato culon">
+            <h5 class="center">
+                <b id="h5panel"></b>
+            </h5>
+            <h5 id="subh5panel" class="center"></h5>
+        </div>
+        <div class="left col s7 offset-s2 resumen orange lighten-3">
+            <h4 class="center">Nuestra Empresa</h4>
+            <div id="box__empresa" class="box orange accent-2">
+                <span class="center" id="titulo-empresa"></span>
+            </div>
+            <h4 class="center">Vacantes</h4>
+            <div id="box__vacante" class="box orange accent-2">
+                <h5 class="center">Cantidad: <b id="titulo-vacante"></b>!</h5>
+                <a class="right" href="#">ver mas...</a>
+            </div>
+            <h4 class="center">Pasantias</h4>
+            <div id="box__pasantias" class="box orange accent-2">
+                <h5 class="center">Cantidad: <b id="titulo-pasantias"></b>!</h5>
+                <a class="right" href="#">ver mas...</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="vacanteTab" class="container margin">
+        <h5><b>Mis Vacantes</b></h5>
+        <a href="#modalVacante" class="modal-trigger btn"><i class="left material-icons">add</i>Agregar registro</a>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulVacanteTab" class="collapsible">
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="pasantiasTab" class="container margin">
+        <h5><b>Mis Pasantias</b></h5>
+        <a href="#modalPasantias" class="modal-trigger btn"><i class="left material-icons">add</i>Agregar registro</a>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulPasantiasTab" class="collapsible">
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="postuladosTab" class="container margin">
+        <h4 class="center-align"><b>Postulaciones</b></h4>
+        <table class="striped centered">
+            <thead>
+                <tr>
+                    <th>Puesto</th>
+                    <th>Empresa</th>
+                    <th>Fecha de postulacion</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="settingsTab">
+    </div>
+
+    <div id="modalVacante" class="modal orange lighten-4">
+        <div class="modal-content ">
+            <h4 class="">Agregar Vacante</h4>
+            <form id="vacanteForm">
+                <div class="container margin row">
+                    <div class="input-field col s6">
+                        <input id="titulo" name="titulo" class="inner__input " type="text">
+                        <label for="titulo">Titulo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Salario" id="salario" name="salario" class="col s2" type="text">
+                        <label for="salario">Salario</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Cantidad" id="cantidad" name="cantidad" class="col s2" type="text">
+                        <label for="cantidad">Cantidad</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Ubicacion" id="ubicacion" name="ubicacion" class="inner__input "
+                            type="text">
+                        <label for="ubicacion">Ubicacion</label>
+                    </div>
+                    <textarea id="descripcion" placeholder="Descripcion" class="inner__input inner__input--textarea"
+                        name="descripcion" max-width="100%" cols="30" rows="10"></textarea>
+
+                    <textarea id="requisitos" placeholder="Requisitos" class="inner__input inner__input--textarea"
+                        name="requisitos" cols="30" rows="10"></textarea>
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+
+        </div>
+        </form>
+    </div>
+    <div class="modal-footer orange lighten-3">
+
+    </div>
+    </div>
+
+    <div id="modalPasantias" class="modal orange">
+        <div class="modal-content">
+            <h4>Agregar Pasantias</h4>
+            <form id="pasantiasForm">
+                <div class="container margin row">
+                    <div class="input-field col s6">
+                        <input id="titulo" name="titulo" class="inner__input " type="text">
+                        <label for="titulo">Titulo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Cantidad" id="cantidad" name="cantidad" class="inner__input " type="text">
+                        <label for="cantidad">Cantidad</label>
+                    </div>
+                    <textarea id="descripcion" placeholder="Descripcion" class="inner__input inner__input--textarea"
+                        name="descripcion" max-width="100%" cols="30" rows="10"></textarea>
+                    <textarea id="requisitos" placeholder="Requisitos" class="inner__input inner__input--textarea"
+                        name="requisitos" cols="30" rows="10"></textarea>
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+
+        </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+    </div>
+
+    <div id="modalIdioma" class="modal">
+        <div class="modal-content">
+            <h4>Agregar Idioma</h4>
+            <form id="idiomaForm">
+                <div class="container margin row">
+
+                    <div class="input-field col s6">
+                        <select name="idioma" id="idioma" class="inner__input" data-placeholder="Choose a Language...">
+                            <option value="Afrikaans">Afrikaans</option>
+                            <option value="Albanian">Albanian</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Armenian">Armenian</option>
+                            <option value="Basque">Basque</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Bulgarian">Bulgarian</option>
+                            <option value="Catalan">Catalan</option>
+                            <option value="Cambodian">Cambodian</option>
+                            <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                            <option value="Croatian">Croatian</option>
+                            <option value="Czech">Czech</option>
+                            <option value="Danish">Danish</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="English">English</option>
+                            <option value="Estonian">Estonian</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finnish">Finnish</option>
+                            <option value="French">French</option>
+                            <option value="Georgian">Georgian</option>
+                            <option value="German">German</option>
+                            <option value="Greek">Greek</option>
+                            <option value="Gujarati">Gujarati</option>
+                            <option value="Hebrew">Hebrew</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Hungarian">Hungarian</option>
+                            <option value="Icelandic">Icelandic</option>
+                            <option value="Indonesian">Indonesian</option>
+                            <option value="Irish">Irish</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Javanese">Javanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Latvian">Latvian</option>
+                            <option value="Lithuanian">Lithuanian</option>
+                            <option value="Macedonian">Macedonian</option>
+                            <option value="Malay">Malay</option>
+                            <option value="Malayalam">Malayalam</option>
+                            <option value="Maltese">Maltese</option>
+                            <option value="Maori">Maori</option>
+                            <option value="Marathi">Marathi</option>
+                            <option value="Mongolian">Mongolian</option>
+                            <option value="Nepali">Nepali</option>
+                            <option value="Norwegian">Norwegian</option>
+                            <option value="Persian">Persian</option>
+                            <option value="Polish">Polish</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Punjabi">Punjabi</option>
+                            <option value="Quechua">Quechua</option>
+                            <option value="Romanian">Romanian</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Samoan">Samoan</option>
+                            <option value="Serbian">Serbian</option>
+                            <option value="Slovak">Slovak</option>
+                            <option value="Slovenian">Slovenian</option>
+                            <option selected value="Spanish">Spanish</option>
+                            <option value="Swahili">Swahili</option>
+                            <option value="Swedish ">Swedish </option>
+                            <option value="Tamil">Tamil</option>
+                            <option value="Tatar">Tatar</option>
+                            <option value="Telugu">Telugu</option>
+                            <option value="Thai">Thai</option>
+                            <option value="Tibetan">Tibetan</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Turkish">Turkish</option>
+                            <option value="Ukrainian">Ukrainian</option>
+                            <option value="Urdu">Urdu</option>
+                            <option value="Uzbek">Uzbek</option>
+                            <option value="Vietnamese">Vietnamese</option>
+                            <option value="Welsh">Welsh</option>
+                            <option value="Xhosa">Xhosa</option>
+                        </select>
+                        <label for="idioma">Idioma</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select class="inner__input" name="nivel" id="nivel">
+                            <option value="Muy basico">Muy basico</option>
+                            <option value="Basico">Basico</option>
+                            <option value="Intermedio">Intermedio</option>
+                            <option value="Avanzado">Avanzado</option>
+                            <option value="Nativo">Nativo</option>
+                        </select>
+                        <label for="nivel">Nivel</label>
+                    </div>
+
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="../js/perfil_empleador.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();/*
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, open());
+        });*/
+    </script>
+</body>
+
+</html>

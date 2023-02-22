@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(181deg, #f3d697 48%, #f1bd4d 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-wrapper {
+    background-color: #ccafdd;
+    padding: .1em;
+}
+
+.nav__ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav__li--right {
+    padding-left: 65%;
+}
+
+.nav__li {
+    margin-inline: 2em;
+    align-self: center;
+}
+
+.nav__logo {
+    font-size: 2em;
+    font-family: 'Exo', sans-serif;
+}
+
+.nav-wrapper ul li a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-inline: 10%;
+    margin-top: 5%
+}
+
+.empresa-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.empresa {
+    width: 115%;
+    background-color: #e1d5e9;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #755489;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+}
+
+.empresa__img {
+    width: 15em;
+    border-radius: 100%;
+}
+
+.empresa__postular {
+    border: none;
+    background-color: #ccafdd;
+    margin-top: 2em;
+    width: 135%;
+    height: 4em;
+    text-align: center;
+    border-radius: 2em;    
+    box-shadow: 1px 1px 1px #755489;
+    font-size: 1.5em;
+    cursor: pointer ;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.box {
+    background-color: #e1d5e9;
+    border-radius: 2em;
+    box-shadow: 1px 1px 1px #755489;
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+.box__titulo {
+    text-align: center;
+}

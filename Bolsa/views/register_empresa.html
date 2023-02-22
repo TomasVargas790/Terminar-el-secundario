@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar empresa</title>
+    <link rel="stylesheet" href="../assets/register_empresa.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1">
+            <div id="registerDiv" class="hidden inner">
+                <form method="POST" id="register" action="">
+                    <div class="inner__form inner__form--register">
+                        <h2 class="inner__titulo">Register</h2>
+                        <input name="nombre" placeholder="Nombre" id="nombre" type="text"
+                            class="inner__input inner__input--register" required>
+                        <input name="cuit" placeholder="Cuit" id="cuit" type="text"
+                            class="inner__input inner__input--register" required>
+                        <select id="rubro" name="rubro" id="rubro" class="inner__input--select inner__input">
+                            <option value="">Rubro</option>
+                            <option value="Agricultura / Pesca / Ganadería">Agricultura / Pesca / Ganadería</option>
+                            <option value="Construcción / obras">Construcción / obras</option>
+                            <option value="Educación">Educación</option>
+                            <option value="Energía">Energía</option>
+                            <option value="Entretenimiento / Deportes">Entretenimiento / Deportes</option>
+                            <option value="Fabricación">Fabricación</option>
+                            <option value="Finanzas / Banca">Finanzas / Banca</option>
+                            <option value="Gobierno / No Lucro">Gobierno / No Lucro</option>
+                            <option value="Hostelería / Turismo">Hostelería / Turismo</option>
+                            <option value="Informática / Hardware">Informática / Hardware</option>
+                            <option value="Informática / Software">Informática / Software</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Legal / Asesoría">Legal / Asesoría</option>
+                            <option value="Materias Primas">Materias Primas</option>
+                            <option value="Medios de Comunicación">Medios de Comunicación</option>
+                            <option value="Otros">Otros</option>
+                            <option value="Publicidad / RRPP">Publicidad / RRPP</option>
+                            <option value="RRHH / Personal">RRHH / Personal</option>
+                            <option value="Salud / Medicina">Salud / Medicina</option>
+                            <option value="Servicios Profesionales">Servicios Profesionales</option>
+                            <option value="Telecomunicaciones">Telecomunicaciones</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Venta al consumidor">Venta al consumidor</option>
+                            <option value="Venta al por mayor">Venta al por mayor</option>
+                        </select>
+                        <input name="ubicacion" placeholder="Ubicacion" id="ubicacion" type="text"
+                        class="inner__input inner__input--register" required>
+                        <input name="correo" placeholder="Correo Electronico" id="correo" type="email"
+                        class="inner__input inner__input--register" required>
+                        <input name="img" placeholder="img" id="img" type="text"
+                        class="inner__input inner__input--register" required>
+                        <input name="telefono" placeholder="Telefono" id="telefono" type="tel"
+                        class="inner__input inner__input--register" required>
+                        <textarea name="descripcion" placeholder="Descripcion" id="descripcion" cols="30" rows="10" class="inner__input inner__input--register"></textarea>
+                        <button id="submit" type="submit"
+                            class="inner__input inner__input--register inner__input--button">enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box"></div>
+    </div>
+    <script src="../js/register_empresa.js"></script>
+</body>
+
+</html>

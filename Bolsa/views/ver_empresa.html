@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milanga y co</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-sesion" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="./buscar_empleo.html">Buscar Empleo</a></li>
+                    <li><a href="./perfil_empleado.html">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <style>
+            .margin {
+                margin-top: 5%;
+            }
+
+            .materialboxed {
+                border-radius: 100%;
+            }
+
+            .boton {
+                border-radius: 2em;
+            }
+
+            .sub-panel {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2em;
+                padding: 2em !important;
+            }
+
+            .panel {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2em;
+                padding: 2em !important;
+            }
+
+            .box {
+                margin: 2em;
+                padding: 3em;
+                border-radius: 2em;
+
+            }
+
+            .resumen {
+                border-radius: 2em;
+            }
+
+            .modal {
+                max-height: max-content !important;
+                overflow: visible
+            }
+
+            .vacante {
+                padding: 1em;
+                border-radius: 2em;
+                margin: 1em;
+            }
+
+            .pasantia {
+                padding: 1em;
+                border-radius: 2em;
+                margin: 1em;
+            }
+        </style>
+    </header>
+
+    <div id="resumen" class="margin container row">
+        <div id="empresa" class="col s3 panel orange lighten-3">
+            <img id="empresa-img" class=" materialboxed" width="200" alt="imagen de gato culon">
+            <h5 class="center"><b id="empresa-titulo"></b></h5>
+            <h5 id="empresa-rubro" class="center"></h5>
+        </div>
+        <div class="left col s7 offset-s2 resumen orange lighten-3">
+            <div class="box orange accent-2">
+                <h5 class="center"><b>Nuestra empresa</b></h5>
+                <span id="descripcion"></span>
+            </div>
+            <div id="box__vacante" class="box orange accent-2">
+                <h5 class="center"><b>Vacantes</b></h5>
+            </div>
+            <div class="box orange accent-2">
+                <h5 class="center"><b>Pasantias</b></h5>
+                <div class="pasantia orange lighten-3">
+                    <span>pasantia</span>
+                    <a class="right" href="#">ver mas...</a>
+                </div>
+                <div class="pasantia orange lighten-3">
+                    <span>pasantia</span>
+                    <a class="right" href="#">ver mas...</a>
+                </div>
+                <div class="pasantia orange lighten-3">
+                    <span>pasantia</span>
+                    <a class="right" href="#">ver mas...</a>
+                </div>
+                <div class="pasantia orange lighten-3">
+                    <span>pasantia</span>
+                    <a class="right" href="#">ver mas...</a>
+                </div>
+                <div class="pasantia orange lighten-3">
+                    <span>pasantia</span>
+                    <a class="right" href="#">ver mas...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/ver_empresa.js"></script>
+    <script>
+        M.AutoInit();/*
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems, open());
+            });*/
+    </script>
+</body>
+
+</html>l

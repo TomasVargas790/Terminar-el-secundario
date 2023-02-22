@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/login.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script defer src="../js/login_empleado.js"> </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box1">
+            <div class="background"></div>
+        </div>
+        <div class="box2">
+            <div id="loginDiv" class=" flex inner inner--login ">
+                <form name="login" method="POST" id="login" >
+                    <div class="inner__form">
+                        <h2 class="inner__titulo">Login</h2>
+                        <input name="correo" placeholder="Correo Electronico" id="correo" type="email"
+                            value="tomatote@gmail.com" class="inner__input inner__input--login">
+                        <input value="Tuco" name="hash" placeholder="Contraseña" id="hash" type="password"
+                            class="inner__input inner__input--login">
+                        <a href="#" class="inner__a">¿No tenes cuenta?</a>
+                        <input name="login_submit" id="login_submit" type="submit"
+                            class="inner__input inner__input--login inner__input--button">
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div id="registerDiv" class="hidden inner inner--register">
+                <form id="register" method="POST" name="register" enctype="multipart/form-data">
+                    <div class="inner__form inner__form--register">
+                        <h2 class="inner__titulo inner__input--register">Register</h2>
+                        <input name="nombre" placeholder="Nombre" id="nombre" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="apellido" placeholder="Apellido" id="apellido" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="dni" placeholder="Documento" id="dni" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="correo" placeholder="Correo Electronico" id="correo"
+                            type="email" class="inner__input inner__input--register">
+
+                        <input name="telefono" placeholder="Telefono" id="telefono" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="img" placeholder="Imagen" id="img" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="ubicacion" placeholder="Direccion" id="ubicacion" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input name="cv" placeholder="Curriculum" id="cv" type="text"
+                            class="inner__input inner__input--register">
+
+                        <input e="hash" placeholder="Contraseña" id="hash" type="password"
+                            class="inner__input inner__input--register">
+
+
+
+
+                        <button name="submit" id="submit" type="submit"
+                            class="inner__input inner__input--register inner__input--button">Enviar</button>
+
+                        <a href="#" class="inner__a inner__input--register">¿Ya tenes cuenta?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

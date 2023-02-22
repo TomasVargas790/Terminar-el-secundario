@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <style>
+        .collapsible-header{
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        p {
+            box-sizing: content-box !important;
+            line-break:anywhere
+        }
+
+        .margin {
+            margin-top: 5%;
+        }
+
+        .materialboxed {
+            border-radius: 100%;
+        }
+
+        .panel {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2em;
+            padding: 2em !important;
+        }
+
+        .box {
+            margin: 2em;
+            padding: 3em;
+            border-radius: 2em;
+
+        }
+
+        .resumen {
+            border-radius: 2em;
+        }
+
+        .modal {
+            max-height: max-content !important;
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class=" container nav-wrapper">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-session" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a id="buscar-algo" href="./buscar_empleo.html"></a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#resumen">Resumen</a></li>
+                    <li class="tab"><a href="#estudiosTab">Estudios</a></li>
+                    <li class="tab"><a href="#experienciaTab">Experiencia</a></li>
+                    <li class="tab"><a href="#idiomaTab">Idiomas</a></li>
+                    <li class="tab"><a href="#postuladosTab">Postulaciones</a></li>
+                    <li class="tab"><a href="#settingsTab">Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="resumen" class="container margin row">
+        <div id="panel" class=" col s3 panel orange lighten-3">
+            <img id="img" src="" class=" materialboxed" width="200" alt="imagen de gato culon">
+            <h5 class="center">
+                <b id="h5panel"></b>
+            </h5>
+            <h5 id="subh5panel" class="center"></h5>
+        </div>
+        <div class="left col s7 offset-s2 resumen orange lighten-3">
+            <h4 class="center">Estudios</h4>
+            <div id="box__estudios" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-estudios"></b></h5>
+                <a class="right" href="#">ver mas...</a>
+            </div>
+            <h4 class="center">Experiencia</h4>
+            <div id="box__experiencia" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-experiencia"></b></h5>
+                <a class="right" href="#">ver mas...</a>
+            </div>
+            <h4 class="center">Idioma</h4>
+            <div id="box__idioma" class="box orange accent-2">
+                <h5 class="center"><b id="titulo-idioma"></b></h5>
+                <a class="right" href="#">ver mas...</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="estudiosTab" class="container margin">
+        <h5><b>Mis Estudios</b></h5>
+        <a href="#modalEstudios" class="modal-trigger btn"><i class="left material-icons">add</i>Agregar registro</a>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulEstudioTab" class="collapsible">
+                <li>
+                    <div class="orange lighten-2 collapsible-header">
+                        <h6 width="100%" class="right" >PRUEBA</h6>
+                    </div>
+                    <div class="orange lighten-4 collapsible-body">
+                        <h6>PRUEBA</h6>
+                        <h6>INICIO: 123123123</h6>
+                        <h6>FINALIZACION: 123123123</h6>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam autem eligendi nemo
+                            nihil voluptates inventore voluptatem distinctio qui molestiae
+                            debitis repellat quisquam earum, aliquid at doloribus, eos enim est eaque! Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Ipsum dignissimos necessitatibus dolorum distinctio
+                            incidunt sapiente explicabo dolores voluptatum sed eligendi amet sequi ad ullam excepturi
+                            recusandae nulla, at tenetur dolore! Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias deleniti, dolores dolor porro explicabo odio voluptatem, magni dolore excepturi
+                            nihil qui incidunt perferendis laborum ratione necessitatibus quaerat nobis quos
+                            temporibus.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="experienciaTab" class="container margin">
+        <h5><b>Mis Experiencias</b></h5>
+        <a href="#modalExperiencia" class="modal-trigger btn"><i class="left material-icons">add</i>Agregar registro</a>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulExperienciaTab" class="collapsible">
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="idiomaTab" class="container margin">
+        <h5><b>Mis Idiomas</b></h5>
+        <a href="#modalIdioma" class="modal-trigger btn"><i class="left material-icons">add</i>Agregar registro</a>
+        <div class="orange lighten-3 containerEstudios">
+            <ul id="ulIdiomaTab" class="collapsible">
+            </ul>
+        </div>
+    </div>
+
+    <div id="postuladosTab" class="container margin">
+        <h4 class="center-align"><b>Postulaciones</b></h4>
+        <table class="striped centered">
+            <thead>
+                <tr>
+                    <th>Puesto</th>
+                    <th>Empresa</th>
+                    <th>Fecha de postulacion</th>
+                    <th>Accion</th>
+                </tr>
+            </thead>
+            <tbody id="postuladosTabla">
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                    <td>Salon</td>
+                    <td>Milanga</td>
+                    <td>01/02/23</td>
+                    <td><a href="#" class="red btn"><i class="material-icons">delete</i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="settingsTab">
+    </div>
+
+    <div id="modalEstudios" class="modal orange lighten-4">
+        <div class="modal-content ">
+            <h4 class="">Agregar Estudios</h4>
+            <form id="estudiosForm">
+                <div class="container margin row">
+                    <div class="input-field col s6">
+                        <input id="titulo_estudios" name="titulo" class="inner__input " type="text">
+                        <label for="titulo_estudios">Titulo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Promedio" id="promedio" name="promedio" class="inner__input " type="text">
+                        <label for="promedio">Promedio</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="fecha_inicio_estudios" class="inner__input" name="fecha_inicio" type="date">
+                        <label for="fecha_inicio_estudios">Fecha de inicio</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="fecha_fin_estudios" class="inner__input " name="fecha_fin" type="date">
+                        <label for="fecha_fin_estudios">Fecha de finalizacion</label>
+                    </div>
+                    <textarea id="descripcion_estudios" placeholder="Descripcion"
+                        class="inner__input inner__input--textarea" name="descripcion" id="" max-width="100%" cols="30"
+                        rows="10"></textarea>
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer orange lighten-3">
+
+        </div>
+    </div>
+
+    <div id="modalExperiencia" class="modal">
+        <div class="modal-content">
+            <h4>Agregar Experiencia</h4>
+            <form id="experienciaForm">
+                <div class="container margin row">
+                    <div class="input-field col s6">
+                        <input id="titulo" name="titulo" class="inner__input" type="text">
+                        <label for="titulo">Titulo</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="empresa" name="empresa" class="inner__input" type="text">
+                        <label for="empresa">Empresa</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="rubro" name="rubro" id="rubro" class="inner__input">
+                            <option value="">Rubro</option>
+                            <option value="Agricultura / Pesca / Ganadería">Agricultura / Pesca / Ganadería</option>
+                            <option value="Construcción / obras">Construcción / obras</option>
+                            <option value="Educación">Educación</option>
+                            <option value="Energía">Energía</option>
+                            <option value="Entretenimiento / Deportes">Entretenimiento / Deportes</option>
+                            <option value="Fabricación">Fabricación</option>
+                            <option value="Finanzas / Banca">Finanzas / Banca</option>
+                            <option value="Gobierno / No Lucro">Gobierno / No Lucro</option>
+                            <option value="Hostelería / Turismo">Hostelería / Turismo</option>
+                            <option value="Informática / Hardware">Informática / Hardware</option>
+                            <option value="Informática / Software">Informática / Software</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Legal / Asesoría">Legal / Asesoría</option>
+                            <option value="Materias Primas">Materias Primas</option>
+                            <option value="Medios de Comunicación">Medios de Comunicación</option>
+                            <option value="Otros">Otros</option>
+                            <option value="Publicidad / RRPP">Publicidad / RRPP</option>
+                            <option value="RRHH / Personal">RRHH / Personal</option>
+                            <option value="Salud / Medicina">Salud / Medicina</option>
+                            <option value="Servicios Profesionales">Servicios Profesionales</option>
+                            <option value="Telecomunicaciones">Telecomunicaciones</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Venta al consumidor">Venta al consumidor</option>
+                            <option value="Venta al por mayor">Venta al por mayor</option>
+                        </select>
+                        <label for="rubro">Rubro</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="fecha_inicio" class="inner__input" name="fecha_inicio" type="date">
+                        <label for="fecha_inicio">Fecha de inicio</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="fecha_fin" class="inner__input" name="fecha_fin" type="date">
+                        <label for="fecha_fin">Fecha de finalizacion</label>
+                    </div>
+                    <textarea id="descripcion" placeholder="Ingrese porfavor su experiencia"
+                        class="inner__input inner__input--textarea" name="descripcion" id="" cols="30"
+                        rows="10"></textarea>
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+    </div>
+
+    <div id="modalIdioma" class="modal">
+        <div class="modal-content">
+            <h4>Agregar Idioma</h4>
+            <form id="idiomaForm">
+                <div class="container margin row">
+
+                    <div class="input-field col s6">
+                        <select name="idioma" id="idioma" class="inner__input" data-placeholder="Choose a Language...">
+                            <option value="Afrikaans">Afrikaans</option>
+                            <option value="Albanian">Albanian</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Armenian">Armenian</option>
+                            <option value="Basque">Basque</option>
+                            <option value="Bengali">Bengali</option>
+                            <option value="Bulgarian">Bulgarian</option>
+                            <option value="Catalan">Catalan</option>
+                            <option value="Cambodian">Cambodian</option>
+                            <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                            <option value="Croatian">Croatian</option>
+                            <option value="Czech">Czech</option>
+                            <option value="Danish">Danish</option>
+                            <option value="Dutch">Dutch</option>
+                            <option value="English">English</option>
+                            <option value="Estonian">Estonian</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finnish">Finnish</option>
+                            <option value="French">French</option>
+                            <option value="Georgian">Georgian</option>
+                            <option value="German">German</option>
+                            <option value="Greek">Greek</option>
+                            <option value="Gujarati">Gujarati</option>
+                            <option value="Hebrew">Hebrew</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Hungarian">Hungarian</option>
+                            <option value="Icelandic">Icelandic</option>
+                            <option value="Indonesian">Indonesian</option>
+                            <option value="Irish">Irish</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Javanese">Javanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Latvian">Latvian</option>
+                            <option value="Lithuanian">Lithuanian</option>
+                            <option value="Macedonian">Macedonian</option>
+                            <option value="Malay">Malay</option>
+                            <option value="Malayalam">Malayalam</option>
+                            <option value="Maltese">Maltese</option>
+                            <option value="Maori">Maori</option>
+                            <option value="Marathi">Marathi</option>
+                            <option value="Mongolian">Mongolian</option>
+                            <option value="Nepali">Nepali</option>
+                            <option value="Norwegian">Norwegian</option>
+                            <option value="Persian">Persian</option>
+                            <option value="Polish">Polish</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Punjabi">Punjabi</option>
+                            <option value="Quechua">Quechua</option>
+                            <option value="Romanian">Romanian</option>
+                            <option value="Russian">Russian</option>
+                            <option value="Samoan">Samoan</option>
+                            <option value="Serbian">Serbian</option>
+                            <option value="Slovak">Slovak</option>
+                            <option value="Slovenian">Slovenian</option>
+                            <option selected value="Spanish">Spanish</option>
+                            <option value="Swahili">Swahili</option>
+                            <option value="Swedish ">Swedish </option>
+                            <option value="Tamil">Tamil</option>
+                            <option value="Tatar">Tatar</option>
+                            <option value="Telugu">Telugu</option>
+                            <option value="Thai">Thai</option>
+                            <option value="Tibetan">Tibetan</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Turkish">Turkish</option>
+                            <option value="Ukrainian">Ukrainian</option>
+                            <option value="Urdu">Urdu</option>
+                            <option value="Uzbek">Uzbek</option>
+                            <option value="Vietnamese">Vietnamese</option>
+                            <option value="Welsh">Welsh</option>
+                            <option value="Xhosa">Xhosa</option>
+                        </select>
+                        <label for="idioma">Idioma</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select class="inner__input" name="nivel" id="nivel">
+                            <option value="Muy basico">Muy basico</option>
+                            <option value="Basico">Basico</option>
+                            <option value="Intermedio">Intermedio</option>
+                            <option value="Avanzado">Avanzado</option>
+                            <option value="Nativo">Nativo</option>
+                        </select>
+                        <label for="nivel">Nivel</label>
+                    </div>
+
+                    <button type="submit" class="waves-effect waves-green btn-flat">Agree</button>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="../js/perfil_empleado.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();/*
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, open());
+        });*/
+    </script>
+</body>
+
+</html>

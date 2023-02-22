@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+.nav{
+    background-color: #f3f2ccc4;
+    padding:.1em;
+}
+.nav__ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav__li--right{    
+    padding-left:65%;
+}
+
+.nav__li{
+    margin-inline: 2em;
+    align-self: center;
+}
+.nav__logo{
+    font-size: 2em;    
+    font-family: 'Exo', sans-serif;
+}
+.nav-wrapper ul li a{    
+    text-decoration: none;   
+}
+.box1 {
+    width: 60%;
+    height: 100%;
+    background: url(../assets/trabajoxd.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.box1--empresa{    
+    background: url(../assets/login_empresa.jpg);
+    background-position: right;
+}
+.box2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ff1d1d, #FF9F9F);
+    opacity: .35;
+}
+
+.background--empresa{    
+    background: linear-gradient(to top, #f54545, #FF9F9F);
+    opacity:.2;
+}
+.inner {
+    padding: 2em;
+    color: #000000;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+.inner__titulo {
+    text-align: center;
+}
+
+.inner__input{
+    border:none;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #dac9c9c7;
+    width: 45%;
+    border-radius: 2em;
+}
+
+.inner__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.inner__input--select{
+    width:50%
+} 
+
+.inner__a {
+    text-decoration: none;
+    text-align: end;
+    margin-bottom: 1em;
+}
+
+.inner__input--button{
+    cursor: pointer;
+    background-color: #ce8989;
+}
+.inner__input--button:hover{
+    background-color: #ce6d6d;
+}

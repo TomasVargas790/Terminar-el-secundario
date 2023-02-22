@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/crear.css">
+    <title>Crear</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <nav data-aos="fade-down" class="nav-wrapper">
+        <ul class="nav__ul">
+            <li class="nav__li"><a href="#" class="nav__logo">LABURO</a></li>
+            <li class="nav__li"><a href="#" class="nav__a">Index</a></li>
+            <li class="nav__li nav__li--right"><a href="#" class="nav__a">Tomás Vargas</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <div class="steps">
+            <a id="boton_1" href="" class="active circulos">1</a>
+            <a id="boton_2" href="" class="circulos">2</a>
+            <a id="boton_3" href="" class="circulos">3</a>
+        </div>
+
+        <div id="estudiosContainer" data-aos="fade-right" class="outer">
+            <h2 class="inner__h2">Crear Estudios</h2>
+            <form id="estudios">
+                <div class="inner">
+                    <input placeholder="Titulo" id="titulo_estudios" name="titulo" class="inner__input " type="text">
+                    <input placeholder="Promedio" id="promedio" name="" class="inner__input " type="text">
+                    <input id="fecha_inicio_estudios" class="inner__input" name="fecha_inicio" type="date">
+                    <input id="fecha_fin_estudios" class="inner__input " name="fecha_fin" type="date">
+                    <textarea id="descripcion_estudios" placeholder="Descripcion"
+                        class="inner__input inner__input--textarea" name="descripcion" id="" cols="30"
+                        rows="10"></textarea>
+                    <button type="submit" id="experiencia_submit"
+                        class="inner__input inner__input--boton">enviar</button>
+                </div>
+            </form>
+        </div>
+        <div id="experienciaContainer" data-aos="fade-right" class="hidden outer">
+            <h2 class="inner__h2">Crear experiencia</h2>
+            <form id="experiencia">
+                <div class="inner">
+                    <input placeholder="Cargo" id="titulo" name="titulo" class="inner__input" type="text">
+                    <input placeholder="Nombre de la Empresa" id="empresa" name="empresa" class="inner__input"
+                        type="text">
+                    <select id="rubro" name="rubro" id="rubro" class="inner__input">
+                        <option value="">Rubro</option>
+                        <option value="Agricultura / Pesca / Ganadería">Agricultura / Pesca / Ganadería</option>
+                        <option value="Construcción / obras">Construcción / obras</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Energía">Energía</option>
+                        <option value="Entretenimiento / Deportes">Entretenimiento / Deportes</option>
+                        <option value="Fabricación">Fabricación</option>
+                        <option value="Finanzas / Banca">Finanzas / Banca</option>
+                        <option value="Gobierno / No Lucro">Gobierno / No Lucro</option>
+                        <option value="Hostelería / Turismo">Hostelería / Turismo</option>
+                        <option value="Informática / Hardware">Informática / Hardware</option>
+                        <option value="Informática / Software">Informática / Software</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Legal / Asesoría">Legal / Asesoría</option>
+                        <option value="Materias Primas">Materias Primas</option>
+                        <option value="Medios de Comunicación">Medios de Comunicación</option>
+                        <option value="Otros">Otros</option>
+                        <option value="Publicidad / RRPP">Publicidad / RRPP</option>
+                        <option value="RRHH / Personal">RRHH / Personal</option>
+                        <option value="Salud / Medicina">Salud / Medicina</option>
+                        <option value="Servicios Profesionales">Servicios Profesionales</option>
+                        <option value="Telecomunicaciones">Telecomunicaciones</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Venta al consumidor">Venta al consumidor</option>
+                        <option value="Venta al por mayor">Venta al por mayor</option>
+                    </select>
+                    <input id="fecha_inicio" placeholder="Fecha de inicio" class="inner__input" name="fecha_inicio"
+                        type="date">
+                    <input id="fecha_fin" class="inner__input" name="fecha_fin" type="date">
+                    <textarea id="descripcion" placeholder="Ingrese porfavor su experiencia"
+                        class="inner__input inner__input--textarea" name="descripcion" id="" cols="30"
+                        rows="10"></textarea>
+                    <button type="submit" id="experiencia_submit"
+                        class="inner__input inner__input--boton">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+        <div id="idiomasContainer" data-aos="fade-right" class="hidden outer">
+            <h2 class="inner__h2">Crear Idioma</h2>
+            <form id="idiomas">
+                <div class="inner">
+                    <select name="idioma" id="idioma" class="inner__input" data-placeholder="Choose a Language...">
+                        <option value="Afrikaans">Afrikaans</option>
+                        <option value="Albanian">Albanian</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="Armenian">Armenian</option>
+                        <option value="Basque">Basque</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Bulgarian">Bulgarian</option>
+                        <option value="Catalan">Catalan</option>
+                        <option value="Cambodian">Cambodian</option>
+                        <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+                        <option value="Croatian">Croatian</option>
+                        <option value="Czech">Czech</option>
+                        <option value="Danish">Danish</option>
+                        <option value="Dutch">Dutch</option>
+                        <option value="English">English</option>
+                        <option value="Estonian">Estonian</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finnish">Finnish</option>
+                        <option value="French">French</option>
+                        <option value="Georgian">Georgian</option>
+                        <option value="German">German</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Hebrew">Hebrew</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Hungarian">Hungarian</option>
+                        <option value="Icelandic">Icelandic</option>
+                        <option value="Indonesian">Indonesian</option>
+                        <option value="Irish">Irish</option>
+                        <option value="Italian">Italian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Javanese">Javanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Latin">Latin</option>
+                        <option value="Latvian">Latvian</option>
+                        <option value="Lithuanian">Lithuanian</option>
+                        <option value="Macedonian">Macedonian</option>
+                        <option value="Malay">Malay</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="Maltese">Maltese</option>
+                        <option value="Maori">Maori</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Mongolian">Mongolian</option>
+                        <option value="Nepali">Nepali</option>
+                        <option value="Norwegian">Norwegian</option>
+                        <option value="Persian">Persian</option>
+                        <option value="Polish">Polish</option>
+                        <option value="Portuguese">Portuguese</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Quechua">Quechua</option>
+                        <option value="Romanian">Romanian</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Samoan">Samoan</option>
+                        <option value="Serbian">Serbian</option>
+                        <option value="Slovak">Slovak</option>
+                        <option value="Slovenian">Slovenian</option>
+                        <option selected value="Spanish">Spanish</option>
+                        <option value="Swahili">Swahili</option>
+                        <option value="Swedish ">Swedish </option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Tatar">Tatar</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Tibetan">Tibetan</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="Ukrainian">Ukrainian</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Uzbek">Uzbek</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Welsh">Welsh</option>
+                        <option value="Xhosa">Xhosa</option>
+                    </select>
+                    <select class="inner__input" name="nivel" id="nivel">
+                        <option value="Muy basico">Muy basico</option>
+                        <option value="Basico">Basico</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Avanzado">Avanzado</option>
+                        <option value="Nativo">Nativo</option>
+                    </select>
+                    <button type="submit" id="experiencia_submit"
+                        class="inner__input inner__input--boton">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/crear_extra.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

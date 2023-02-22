@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Empleo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .containerMargin {
+            margin-top: 5%;
+        }
+
+        .inline-cosas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box {
+            border-radius: 2em;
+            padding: 1em;
+            margin-bottom: 2.5em;
+        }
+
+        .panel {
+            border-radius: 2em;
+            padding: 2em !important;
+        }
+
+        .containerBox {
+            border-radius: 2em;
+            padding: 2em !important;
+            padding-top: 2em !important;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="orange lighten-4">
+    <header>
+        <nav class="nav-extended deep-orange lighten-2 z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="#" class=" center brand-logo">LABURO</a>
+                <ul class="right">
+                    <li><a id="cerrar-session" href="#">Cerrar Sesion</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="./perfil_empleado.html">Perfil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container row containerMargin">
+        <div class="panel col s4 orange lighten-3">
+            <h2>oa</h2>
+            <span>aaaaaaa</span>
+        </div>
+
+        <div id="box-container" class="containerBox col s7 offset-s1  orange lighten-3">
+
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/buscar_empleado.js"> </script>
+
+    <script>
+        M.AutoInit();/*
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.materialboxed');
+                var instances = M.Materialbox.init(elems, open());
+            });*/
+    </script>
+</body>
+
+</html>

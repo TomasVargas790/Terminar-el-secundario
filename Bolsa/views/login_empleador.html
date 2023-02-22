@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title id="title"></title>
+    <link rel="stylesheet" href="../assets/login.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <div class="container">
+        <div class="box2">
+
+            <div id="loginDiv" class="flex inner">
+                <form id="login">
+                    <div class="inner__form">
+
+                        <h2 class="inner__titulo">Login</h2>
+                        <input name="correo" placeholder="Correo Electronico" id="login_correo" type="text"
+                            class="inner__input inner__input--login">
+                        <input name="hash" placeholder="Contraseña" id="login_hash" type="text"
+                            class="inner__input inner__input--login" required>
+                        <a href="#" class="inner__a">¿No tenes cuenta?</a>
+                        <button name="submit" id="submit" type="submit"
+                            class="inner__input inner__input--login inner__input--button" required>Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div id="registerDiv" class="hidden inner">
+                <form id="register">
+                    <div class="inner__form inner__form--register">
+
+                        <h2 class="inner__titulo">Register</h2>
+                        <input name="nombre" placeholder="Nombre" id="nombre" type="text"
+                            class="inner__input inner__input--register" required>
+
+                        <input name="apellido" placeholder="Apellido" id="apellido" type="text"
+                            class="inner__input inner__input--register" required>
+                        <input name="correo" placeholder="Correo Electronico" id="correo" type="email"
+                            class="inner__input inner__input--register" required>
+
+                        <input name="dni" placeholder="Documento" id="dni" type="text"
+                            class="inner__input inner__input--register" required>
+
+                        <input name="telefono" placeholder="Telefono" id="telefono" type="tel"
+                            class="inner__input inner__input--register" required>
+
+                        <select id="selectEmpresa" class="inner__input inner__input--select " name="empresa">
+                            <option disabled="disabled" value="">Empresa</option>
+                        </select>
+
+                        <input name="hash" placeholder="Contraseña" id="hash" type="text"
+                            class="inner__input inner__input--register" required>
+
+
+                        <a href="#" class="inner__a">¿No tenes cuenta?</a>
+                        <button id="submit" type="submit"
+                            class="inner__input inner__input--register inner__input--button">enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="box1 box1--empresa">
+            <div class="background background--empresa"></div>
+        </div>
+    </div>
+
+
+    <footer>
+
+    </footer>
+    <script src="../js/login_empleador.js"></script>
+</body>
+
+</html>

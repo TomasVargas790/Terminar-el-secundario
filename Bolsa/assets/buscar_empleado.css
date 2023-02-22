@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(53% 67% at 50% 81%, #cea3e7 48%, #a05cdf 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ul,li{
+    padding:0;
+    margin: 0;    
+    list-style: none;
+}
+
+a{    
+    text-decoration: none;  
+}
+
+.nav{
+    background-color: rgba(191, 226, 172, 0.743);
+    height: calc(3*1em);
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+.nav__ul{
+    margin-inline: 5%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.nav__li{
+    margin-inline: 2em;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+
+.nav__logo{
+    font-size: 2em;    
+    font-family: 'Exo', sans-serif;
+}
+
+.nav-wrapper ul li a{    
+    text-decoration: none;   
+}
+
+.box-container{
+    display:flex;
+    flex-direction: column;
+    
+}
+.panel{
+    background-color: rgb(251 211 255 / 74%);
+    width: calc(2em*12);
+    border-radius: 1em;
+}
+.panel__form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.panel__input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+}
+.container {     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    width: 100%;
+    margin-top:4em;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(251 211 255 / 74%);
+    border-radius: 1em;
+    padding: 2em;
+    width: calc(2em*15);
+}
+
+.search-action{
+    
+}
+
+.search__input{
+    margin-top: 2em;
+    border: none;
+    border-radius: 2em;
+    width: calc(1em*15);
+    height: 2em;
+    padding: 1em;
+}
+
+.box__img {
+    width: calc(1rem*7);
+    border-radius: 100%;
+}
+
+@media (max-width:700px) {
+    .panel{
+        display: none;
+    }
+    .box__img {
+
+        width: calc(1rem*7);
+        border-radius: 100%;
+    }
+
+
+    .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(242, 127, 252, 0.743);
+        border-radius: 1em;
+        padding: 2em;
+        width: calc(1em*20);
+    }
+}
